@@ -1,6 +1,7 @@
 from zipfile import ZipFile
 from PyPDF2 import PdfReader
 from openpyxl import load_workbook
+import csv
 
 
 def test_read_pdf_file():
@@ -21,5 +22,11 @@ def test_read_xlsx_file():
 
 
 def test_read_csv_file():
+    with open(".\\folder\\username.csv") as f:
+        reader = csv.reader(f)
+        for i in reader:
+            print(i)
 
 
+def test_zip_file():
+    pass
